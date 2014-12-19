@@ -8,20 +8,20 @@ Light painting involves taking photographs at a long exposure in a dark area. Us
 If you can set your shutter speed on your camera to a minimum of 10 seconds and can attach it to a tripod, you should be able to try light painting.     
 
 ##Aim   
-The aim of this project was to create a simple, easy to build light painter using an Arduino and its onboard flash memory instead of external storage (like a micro-sd card). Although I have been light painting for years, I was inspired to try this project after reading [Adafruits guide](https://learn.adafruit.com/neopixel-painter/overview) on it and not having an SD card shield. I wanted to try and see if it was doable using the standard internal flash memory on an Arduino (which it turned out to be so).   
+The aim of this project was to create a simple, easy to build and cheap (under £50) light painter using an Arduino and its onboard flash memory instead of external storage (like a micro-sd card). Although I have been light painting for years, I was inspired to try this project after reading [Adafruits guide](https://learn.adafruit.com/neopixel-painter/overview) on it and not having an SD card shield. I wanted to try and see if it was doable using the standard internal flash memory on an Arduino (which it turned out to be so).   
 For a technical explination of some of the decisions in this project, check the [technical information page](technical.md).
 
 ##What do you need?
 - **Camera** - Must support a shutter speed of at least 10 seconds, up to 30 seconds is preferable.   
 - **Tripod** - A tripod of some way to keep the camera from moving is extremely important
-- **Wood** - A long and thin piece of wood works great. Mine was an offcut and measures 1.2m. I wouldn't recommend any less than 1.1m so you have space for your electronics.
+- **Wood** - ~£1 - A long and thin piece of wood works great. Mine was an offcut and measures 1.2m. I wouldn't recommend any less than 1.1m so you have space for your electronics.
 - **Rubber bands** - A collection of small rubber bands to hold everything together.   
 
 ###Electronics   
-- **Arduno** - An Arduino Uno will work, although is limited by built in memory. An Arduino Uno can hold  9120 pixels (27360 array items).   
+- **Arduno** - ~£20 - An Arduino Uno will work, although is limited by built in memory. An Arduino Uno can hold  9120 pixels (27360 array items).   
 An Arduino Mega (2560) on the other hand can store roughly 72,000 pixels (218,880 array items) so is more suitable for this project.
-- **Neopixel strip** - A Neopixel strip or other WS2812B based strip. I used a [60 pixel 1 meter strip](http://www.adafruit.com/products/1461) but you could also use much higher density strips like [this 144 pixel per meter strip](http://www.adafruit.com/products/1461)!
-- **Battery** - In my case, to keep it nice and simple, I used a USB battery pack.
+- **Neopixel strip** - ~20 - A Neopixel strip or other WS2812B based strip. I used a [60 pixel 1 meter strip](http://www.adafruit.com/products/1461) but you could also use much higher density strips like [this 144 pixel per meter strip](http://www.adafruit.com/products/1461)!
+- **Battery** - ~£7 - In my case, to keep it nice and simple, I used a USB battery pack.
 - **Jumper cables** - A handful of jumper cables is useful, at least male to male.
 
 ###Optional
