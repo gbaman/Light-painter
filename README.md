@@ -8,7 +8,8 @@ Light painting involves taking photographs at a long exposure in a dark area. Us
 If you can set your shutter speed on your camera to a minimum of 10 seconds and can attach it to a tripod, you should be able to try light painting.     
 
 ##Aim   
-The aim of this project was to create a simple, easy to build light painter using an Arduino and its onboard flash memory instead of external storage (like a micro-sd card). Although I have been light painting for years, I was inspired to try this project after reading [Adafruits guide](https://learn.adafruit.com/neopixel-painter/overview) on it and not having an SD card shield. I wanted to try and see if it was doable using the standard internal flash memory on an Arduino (which it turned out to be so).
+The aim of this project was to create a simple, easy to build light painter using an Arduino and its onboard flash memory instead of external storage (like a micro-sd card). Although I have been light painting for years, I was inspired to try this project after reading [Adafruits guide](https://learn.adafruit.com/neopixel-painter/overview) on it and not having an SD card shield. I wanted to try and see if it was doable using the standard internal flash memory on an Arduino (which it turned out to be so).   
+For a technical explination of some of the decisions in this project, check the [technical information page](technical.md).
 
 ##What do you need?
 - **Camera** - Must support a shutter speed of at least 10 seconds, up to 30 seconds is preferable.   
@@ -49,6 +50,7 @@ The settings used to export the images from Photoshop (CS6) are below. Similar s
 ![](images/photoshop-settings.png)   
 Grab the Python script from [here](LightPaintBuild.py). You may need to right click, save link as.   
 Then open it in your python program of choice (like IDLE 2).  
+For a technical explination of some of the decisions in this project, check the [technical information page](technical.md).   
    
 ###Configuration options
 There are a number of configuration options you will need to edit depending on your setup in the python program.   
@@ -62,6 +64,8 @@ Once you have the code setup correctly, run the python script. If there is any e
 If all ran correctly, copy the output into a blank Arduino program.   
    
 **Note** - Using [Arduino IDE 1.5.8](http://arduino.cc/en/Main/Software) (beta) or above is highly recommended as some features may not work in version 1.0.6 or earlier.   
+   
+You will also need the Adafruit Neopixel library for Arduino which can be found [here](https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library).
    
 Now just upload the code and the LEDs should start displaying the pattern from your image. Note some colours may be slightly off, you can adjust your image to counter this.   
 
