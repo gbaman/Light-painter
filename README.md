@@ -5,7 +5,10 @@ Arduino Light painter
 ![](images/festival-of-light.jpg)
 
 Light painting involves taking photographs at a long exposure in a dark area. Usually a DSLR is required for long exposure photography, but some modern point-and-shoot cameras also may have this feature.   
-If you can set your shutter speed on your camera to a minimum of 10 seconds and can attach it to a tripod, you should be able to try light painting.   
+If you can set your shutter speed on your camera to a minimum of 10 seconds and can attach it to a tripod, you should be able to try light painting.     
+
+##Aim   
+The aim of this project was to create a simple, easy to build light painter using an Arduino and its onboard memory instead of external storage (like a micro-sd card). Although I have been light painting for years, I was inspired to try this project after reading [Adafruits guide](https://learn.adafruit.com/neopixel-painter/overview) on it and not having an SD card shield. I wanted to try and see if it was doable using the standard internal memory on an Arduino (which it turned out to be so).
 
 ##What do you need?
 - **Camera** - Must support a shutter speed of at least 10 seconds, up to 30 seconds is preferable.   
