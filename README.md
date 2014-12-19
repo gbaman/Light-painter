@@ -71,8 +71,9 @@ To photograph using the light painter, you need to set up your camera. It is imp
 - If possible, drop your ISO to as low as it can go, to reduce grain/noise in the image.   
 - If all else fails, switch to full manual and play about with the settings.     
 
-##Results
-If you end up with any great photographs, I would love to see them! Tweet them to me! [Twitter](http://twitter.com/gbaman1)
+##Results and feedback
+If you end up with any great photographs, I would love to see them! Tweet them to me! [Twitter](http://twitter.com/gbaman1).   
+Finally, if you have any extra questions or find issues in this guide, please open an [issue](https://github.com/gbaman/Light-painter/issues) or drop me a tweet.
 
 ![](images/mario.jpg)
 ![](images/rainbow.jpg)
