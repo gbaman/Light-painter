@@ -72,7 +72,12 @@ To photograph using the light painter, you need to set up your camera. It is imp
 - Use a remote shutter release cable or the timer on the camera to reduce shaking when you hit the shutter button. Most cameras come with at least a 10 second timer, use this.
 - If the image is too bright, drop the exposure compensation (maybe to -3EV or -4EV).
 - If possible, drop your ISO to as low as it can go, to reduce grain/noise in the image.   
-- If all else fails, switch to full manual and play about with the settings.     
+- If all else fails, switch to full manual and play about with the settings.   
+
+##Process
+1. Set your camera up on a tripod or solid object, enable timer and hit the shutter button to start the timer.
+2. Move into frame with your light painter and stand still with finger on the button.   
+3. When the image starts, press the button and very slowly move the light painter to the right, keeping it horizontal and the same height the entire time. You must move the light painter at the same speed the entire time. Finding the correct speed will require experimenting (plus you can also change the delay parameter if need be).
 
 ##Results and feedback
 If you end up with any great photographs, I would love to see them! Tweet them to me! [Twitter](http://twitter.com/gbaman1).   
