@@ -1,0 +1,208 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Light-painter</title>
+  <meta name="description" content="Simple, easy to build Arduino based light painter">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Light-painter</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">Simple, easy to build Arduino based light painter</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/gbaman/Light-painter/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/gbaman/Light-painter/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/gbaman/Light-painter" class="code">View Light-painter on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1>
+<a id="arduino-light-painter" class="anchor" href="#arduino-light-painter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Arduino Light painter</h1>
+
+<p><img src="images/pacman.jpg" alt="">
+<img src="images/festival-of-light.jpg" alt=""></p>
+
+<p>Light painting involves taking photographs at a long exposure in a dark area. Usually a DSLR is required for long exposure photography, but some modern point-and-shoot cameras also may have this feature.<br>
+If you can set your shutter speed on your camera to a minimum of 10 seconds and can attach it to a tripod, you should be able to try light painting.     </p>
+
+<h2>
+<a id="aim" class="anchor" href="#aim" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aim</h2>
+
+<p>The aim of this project was to create a simple, easy to build light painter using an Arduino and its onboard flash memory instead of external storage (like a micro-sd card). Although I have been light painting for years, I was inspired to try this project after reading <a href="https://learn.adafruit.com/neopixel-painter/overview">Adafruits guide</a> on it and not having an SD card shield. I wanted to try and see if it was doable using the standard internal flash memory on an Arduino (which it turned out to be so).</p>
+
+<h2>
+<a id="what-do-you-need" class="anchor" href="#what-do-you-need" aria-hidden="true"><span class="octicon octicon-link"></span></a>What do you need?</h2>
+
+<ul>
+<li>
+<strong>Camera</strong> - Must support a shutter speed of at least 10 seconds, up to 30 seconds is preferable.<br>
+</li>
+<li>
+<strong>Tripod</strong> - A tripod of some way to keep the camera from moving is extremely important</li>
+<li>
+<strong>Wood</strong> - A long and thin piece of wood works great. Mine was an offcut and measures 1.2m. I wouldn't recommend any less than 1.1m so you have space for your electronics.</li>
+<li>
+<strong>Rubber bands</strong> - A collection of small rubber bands to hold everything together.<br>
+</li>
+</ul>
+
+<h3>
+<a id="electronics" class="anchor" href="#electronics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Electronics</h3>
+
+<ul>
+<li>
+<strong>Arduno</strong> - An Arduino Uno will work, although is limited by built in memory. An Arduino Uno can hold  9120 pixels (27360 array items).<br>
+An Arduino Mega (2560) on the other hand can store roughly 72,000 pixels (218,880 array items) so is more suitable for this project.</li>
+<li>
+<strong>Neopixel strip</strong> - A Neopixel strip or other WS2812B based strip. I used a <a href="http://www.adafruit.com/products/1461">60 pixel 1 meter strip</a> but you could also use much higher density strips like <a href="http://www.adafruit.com/products/1461">this 144 pixel per meter strip</a>!</li>
+<li>
+<strong>Battery</strong> - In my case, to keep it nice and simple, I used a USB battery pack.</li>
+<li>
+<strong>Jumper cables</strong> - A handful of jumper cables is useful, at least male to male.</li>
+</ul>
+
+<h3>
+<a id="optional" class="anchor" href="#optional" aria-hidden="true"><span class="octicon octicon-link"></span></a>Optional</h3>
+
+<ul>
+<li>
+<strong>Small breadboard</strong> - Used for the button.</li>
+<li>
+<strong>Breadboard button</strong> - Used with the breadboard to run the program. These are not needed as a jumper can just be used to make it look like a button on all the time.</li>
+<li>
+<strong>10k resistor</strong> - Used with the button.</li>
+</ul>
+
+<h2>
+<a id="building" class="anchor" href="#building" aria-hidden="true"><span class="octicon octicon-link"></span></a>Building</h2>
+
+<p><strong>WARNING!</strong> - Keep an eye on the heat of the regulator on the Arduino!
+When driving 60 or more pixels at one time, it can get hot. Do not use for extended periods of time without separate power supply!   </p>
+
+<ol>
+<li><p>Wire up as in the diagram below.<br>
+<img src="images/wiring-1.jpg" alt=""></p></li>
+<li><p>Attach everything with rubber bands to your piece of wood.
+<img src="images/building-1.jpg" alt="">
+<img src="images/building-2.jpg" alt=""></p></li>
+</ol>
+
+<h2>
+<a id="code" class="anchor" href="#code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code</h2>
+
+<p>The code for this project is generated using a Python script. The script is written for python 2.7 (uses Python Imaging Library). It should though work for Python 3 with an alternative imaging library.   </p>
+
+<p>You will also need an image to display. The code is written to support 24 bit bitmap (.bmp) images. Note no compression is used, it is just the raw 24 bit pixel data.<br>
+The settings used to export the images from Photoshop (CS6) are below. Similar settings should be available in other image editing programs.<br>
+<img src="images/photoshop-settings.png" alt=""><br>
+Grab the Python script from <a href="LightPaintBuild.py">here</a>. You may need to right click, save link as.<br>
+Then open it in your python program of choice (like IDLE 2).  </p>
+
+<h3>
+<a id="configuration-options" class="anchor" href="#configuration-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configuration options</h3>
+
+<p>There are a number of configuration options you will need to edit depending on your setup in the python program.   </p>
+
+<ul>
+<li>
+<strong>Pixels</strong> - This is the number of Neopixels you will be using. The default is <code>pixels = 60</code>.<br>
+</li>
+<li>
+<strong>Length</strong> - This is the length of the arrays you want to use. It must be devisable by pixels. The default is <code>length = 10920</code> which is suitable for 60 Neopixels. The theoretical maximum is <code>length = 10922</code>.<br>
+</li>
+<li>
+<strong>Delay</strong> - This is the delay between each line change in the image. It is in milliseconds. The default is <code>delay = 100</code> which is suitable for most setups.</li>
+<li>
+<strong>File</strong> - This is the path to the image file you wish to use. Remember it must be a .bmp file formatted as described above.<br>
+</li>
+</ul>
+
+<h2>
+<a id="running" class="anchor" href="#running" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running</h2>
+
+<p>Once you have the code setup correctly, run the python script. If there is any errors they should explain what is wrong.<br>
+If all ran correctly, copy the output into a blank Arduino program.   </p>
+
+<p><strong>Note</strong> - Using <a href="http://arduino.cc/en/Main/Software">Arduino IDE 1.5.8</a> (beta) or above is highly recommended as some features may not work in version 1.0.6 or earlier.   </p>
+
+<p>Now just upload the code and the LEDs should start displaying the pattern from your image. Note some colours may be slightly off, you can adjust your image to counter this.   </p>
+
+<h2>
+<a id="photographing" class="anchor" href="#photographing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Photographing</h2>
+
+<p>To photograph using the light painter, you need to set up your camera. It is impossible for me to provide all the settings required, but here are a few tips.</p>
+
+<ul>
+<li>Set shutter speed to 10 seconds or higher! 30 seconds is usually worth trying first.<br>
+</li>
+<li>Use a tripod! You must use a tripod or some other method to keep the camera from moving.<br>
+</li>
+<li>Use a remote shutter release cable or the timer on the camera to reduce shaking when you hit the shutter button. Most cameras come with at least a 10 second timer, use this.</li>
+<li>If the image is too bright, drop the exposure compensation (maybe to -3EV or -4EV).</li>
+<li>If possible, drop your ISO to as low as it can go, to reduce grain/noise in the image.<br>
+</li>
+<li>If all else fails, switch to full manual and play about with the settings.<br>
+</li>
+</ul>
+
+<h2>
+<a id="process" class="anchor" href="#process" aria-hidden="true"><span class="octicon octicon-link"></span></a>Process</h2>
+
+<ol>
+<li>Set your camera up on a tripod or solid object, enable timer and hit the shutter button to start the timer.</li>
+<li>Move into frame with your light painter and stand still with finger on the button.<br>
+</li>
+<li>When the image starts, press the button and very slowly move the light painter to the right, keeping it horizontal and the same height the entire time. You must move the light painter at the same speed the entire time. Finding the correct speed will require experimenting (plus you can also change the delay parameter if need be).</li>
+</ol>
+
+<h2>
+<a id="results-and-feedback" class="anchor" href="#results-and-feedback" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results and feedback</h2>
+
+<p>If you end up with any great photographs, I would love to see them! Tweet them to me! <a href="http://twitter.com/gbaman1">Twitter</a>.<br>
+Finally, if you have any extra questions or find issues in this guide, please open an <a href="https://github.com/gbaman/Light-painter/issues">issue</a> or drop me a tweet.</p>
+
+<p><img src="images/mario.jpg" alt="">
+<img src="images/rainbow.jpg" alt=""></p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/gbaman" class="avatar"><img src="https://avatars1.githubusercontent.com/u/833193?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/gbaman">gbaman</a> maintains <a href="https://github.com/gbaman/Light-painter">Light-painter</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/gbaman/Light-painter/tarball/master" class="tar">tar</a><a href="https://github.com/gbaman/Light-painter/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
+</html>
