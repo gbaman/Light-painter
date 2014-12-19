@@ -1,46 +1,41 @@
-<!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
-  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Light-painter : Simple, easy to build Arduino based light painter">
 
-  <title>Light-painter</title>
-  <meta name="description" content="Simple, easy to build Arduino based light painter">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Light-painter</title>
+  </head>
 
-</head>
+  <body>
 
-<body>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/gbaman/Light-painter">View on GitHub</a>
 
-  <div class="wrapper">
-    <header>
-      <h1 class="title">Light-painter</h1>
-    </header>
-    <div id="container">
-      <p class="tagline">Simple, easy to build Arduino based light painter</p>
-      <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          <a href="https://github.com/gbaman/Light-painter/tarball/master" class="download-button tar"><span>Download</span></a>
-          <a href="https://github.com/gbaman/Light-painter/zipball/master" class="download-button zip"><span>Download</span></a>
-          <a href="https://github.com/gbaman/Light-painter" class="code">View Light-painter on GitHub</a>
-        </div>
-        <span class="blc"></span><span class="trc"></span>
-        </div>
-        <article class="markdown-body">
-          <h1>
+          <h1 id="project_title">Light-painter</h1>
+          <h2 id="project_tagline">Simple, easy to build Arduino based light painter</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/gbaman/Light-painter/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/gbaman/Light-painter/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
 <a id="arduino-light-painter" class="anchor" href="#arduino-light-painter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Arduino Light painter</h1>
 
-<p><img src="images/pacman.jpg" alt="">
-<img src="images/festival-of-light.jpg" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/gbaman/Light-painter/master/images/pacman.jpg" alt="">
+<img src="https://raw.githubusercontent.com/gbaman/Light-painter/master/images/festival-of-light.jpg" alt=""></p>
 
 <p>Light painting involves taking photographs at a long exposure in a dark area. Usually a DSLR is required for long exposure photography, but some modern point-and-shoot cameras also may have this feature.<br>
 If you can set your shutter speed on your camera to a minimum of 10 seconds and can attach it to a tripod, you should be able to try light painting.     </p>
@@ -101,10 +96,10 @@ When driving 60 or more pixels at one time, it can get hot. Do not use for exten
 
 <ol>
 <li><p>Wire up as in the diagram below.<br>
-<img src="images/wiring-1.jpg" alt=""></p></li>
+<img src="https://raw.githubusercontent.com/gbaman/Light-painter/master/images/wiring-1.jpg" alt=""></p></li>
 <li><p>Attach everything with rubber bands to your piece of wood.
-<img src="images/building-1.jpg" alt="">
-<img src="images/building-2.jpg" alt=""></p></li>
+<img src="https://raw.githubusercontent.com/gbaman/Light-painter/master/images/building-1.jpg" alt="">
+<img src="https://raw.githubusercontent.com/gbaman/Light-painter/master/images/building-2.jpg" alt=""></p></li>
 </ol>
 
 <h2>
@@ -114,7 +109,7 @@ When driving 60 or more pixels at one time, it can get hot. Do not use for exten
 
 <p>You will also need an image to display. The code is written to support 24 bit bitmap (.bmp) images. Note no compression is used, it is just the raw 24 bit pixel data.<br>
 The settings used to export the images from Photoshop (CS6) are below. Similar settings should be available in other image editing programs.<br>
-<img src="images/photoshop-settings.png" alt=""><br>
+<img src="https://raw.githubusercontent.com/gbaman/Light-painter/master/images/photoshop-settings.png" alt=""><br>
 Grab the Python script from <a href="LightPaintBuild.py">here</a>. You may need to right click, save link as.<br>
 Then open it in your python program of choice (like IDLE 2).  </p>
 
@@ -181,28 +176,20 @@ If all ran correctly, copy the output into a blank Arduino program.   </p>
 <p>If you end up with any great photographs, I would love to see them! Tweet them to me! <a href="http://twitter.com/gbaman1">Twitter</a>.<br>
 Finally, if you have any extra questions or find issues in this guide, please open an <a href="https://github.com/gbaman/Light-painter/issues">issue</a> or drop me a tweet.</p>
 
-<p><img src="images/mario.jpg" alt="">
-<img src="images/rainbow.jpg" alt=""></p>
-        </article>
-      </div>
+<p><img src="https://raw.githubusercontent.com/gbaman/Light-painter/master/images/mario.jpg" alt="">
+<img src="https://raw.githubusercontent.com/gbaman/Light-painter/master/images/rainbow.jpg" alt=""></p>
+      </section>
     </div>
-    <footer>
-      <div class="owner">
-      <p><a href="https://github.com/gbaman" class="avatar"><img src="https://avatars1.githubusercontent.com/u/833193?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/gbaman">gbaman</a> maintains <a href="https://github.com/gbaman/Light-painter">Light-painter</a></p>
 
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Light-painter maintained by <a href="https://github.com/gbaman">gbaman</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
 
-      </div>
-      <div class="creds">
-        <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
-    </footer>
-  </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    <a href="https://github.com/gbaman/Light-painter/tarball/master" class="tar">tar</a><a href="https://github.com/gbaman/Light-painter/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
-    <p class="name"></p>
-  </div>
+    
 
-  
-</body>
+  </body>
 </html>
